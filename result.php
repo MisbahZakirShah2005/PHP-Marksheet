@@ -1,5 +1,4 @@
 <?php
-// Fetch form data from POST
 $name   = $_POST['name'];
 $email  = $_POST['email'];
 $class  = $_POST['class'];
@@ -8,11 +7,11 @@ $eng    = $_POST['eng'];
 $urdu   = $_POST['urdu'];
 $sci    = $_POST['sci'];
 
-// Calculate totals and percentage
+// logic per/total marks
 $totalMarks = $eng + $urdu + $sci;
 $percentage = ($totalMarks / 300) * 100;
 
-// Determine grade
+// grading condition 
 if ($percentage >= 80) {
     $grade = "A+";
 } elseif ($percentage >= 70) {
@@ -95,7 +94,7 @@ if ($percentage >= 80) {
             </table>
 
             <div class="text-center mt-3">
-                <a href="self.php" class="btn btn-dark">Go Back</a>
+                <a href="index.php" class="btn btn-dark">Go Back</a>
             </div>
         </div>
 
